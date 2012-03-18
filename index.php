@@ -18,21 +18,6 @@
           mapTypeId: google.maps.MapTypeId.TERRAIN
         };
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-		askGeoloc();
-	}
-    
-    function successGeoloc(position) {
-    	console.log(position);
-    }
-    function errorGeoloc() {
-    	console.log("Error getting current position");
-    }
-	function askGeoloc() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(successGeoloc, errorGeoloc);
-		} else {
-			alert('"navigator.geolocation" not supported');
-		}
 	}
     </script>
   </head>
