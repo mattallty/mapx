@@ -1,4 +1,4 @@
 <?php
-exec('github pull');
+echo shell_exec('git pull');
 echo 'OK';
 ?>
