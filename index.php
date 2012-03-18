@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDnIsj5AWRoBSEtKoIWvoEUcb19tyZonMc&sensor=false">
+    </script>
+    <script type="text/javascript">
+	function initialize() {
+        var myOptions = {
+          center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		askGeoloc();
+	}
+    
+    function successGeoloc(position) {
+    	console.log(position);
+    }
+    function errorGeoloc() {
+    	console.log("Error getting current position");
+    }
+	function askGeoloc() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(successGeoloc, errorGeoloc);
+		} else {
+			alert('"navigator.geolocation" not supported');
+		}
+	}
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
