@@ -13,6 +13,7 @@
         var myOptions = {
           center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
           zoom: 6,
+          disableDefaultUI: true,
           mapTypeId: google.maps.MapTypeId.TERRAIN
         };
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
