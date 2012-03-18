@@ -11,11 +11,14 @@
     <script type="text/javascript">
 	function initialize() {
         var myOptions = {
-          center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
-          zoom: 6,
-          disableDefaultUI: true,
-          mapTypeId: google.maps.MapTypeId.TERRAIN
-        };
+        	center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
+			zoom: 6,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+			mapTypeId: google.maps.MapTypeId.TERRAIN
+		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	}
     </script>
