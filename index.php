@@ -14,6 +14,8 @@
         	center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
 			zoom: 6,
 			mapTypeControl: false,
+			streetViewControl : false,
+			panControl : false,
 			zoomControl: true,
 			zoomControlOptions: {
 				style: google.maps.ZoomControlStyle.SMALL
