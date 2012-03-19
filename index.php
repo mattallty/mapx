@@ -24,6 +24,12 @@
 		google.maps.event.addListener(map, 'click', function(event) {
 			console.log("[event][click]" + JSON.stringify(event));
 		});
+		google.maps.event.addListener(map, 'dblclick', function(event) {
+			console.log("[event][dblclick]" + JSON.stringify(event));
+		});
+		google.maps.event.addListener(map, 'mouseup', function(event) {
+			console.log("[event][mouseup]" + JSON.stringify(event));
+		});
 	}
     </script>
   </head>
