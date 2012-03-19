@@ -19,8 +19,7 @@
 			panControl : false,
 			zoomControl: true,
 			maxZoom : 10,
-//			mapTypeId: google.maps.MapTypeId.TERRAIN
-			mapTypeId: google.maps.MapTypeId.SATELLITE
+			mapTypeId: google.maps.MapTypeId.TERRAIN
 		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 		google.maps.event.addListener(map, 'click', function(e) {
