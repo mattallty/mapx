@@ -1,5 +1,4 @@
 <?php
-echo shell_exec('git pull');
-
+exec('/usr/bin/git pull');
 echo 'OK';
 ?>
