@@ -13,12 +13,12 @@
 	function initialize() {
         var myOptions = {
         	center: new google.maps.LatLng(<?=$_SERVER["GEOIP_LATITUDE"]?>, <?=$_SERVER["GEOIP_LONGITUDE"]?>),
-			zoom: 9,
+			zoom: 8,
 			mapTypeControl: false,
 			streetViewControl : false,
 			panControl : false,
 			zoomControl: true,
-			maxZoom : 9,
+			maxZoom : 10,
 //			mapTypeId: google.maps.MapTypeId.TERRAIN
 			mapTypeId: google.maps.MapTypeId.SATELLITE
 		};
