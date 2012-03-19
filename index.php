@@ -17,9 +17,6 @@
 			streetViewControl : false,
 			panControl : false,
 			zoomControl: true,
-			zoomControlOptions: {
-				style: google.maps.ZoomControlStyle.SMALL
-			},
 			mapTypeId: google.maps.MapTypeId.TERRAIN
 		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
