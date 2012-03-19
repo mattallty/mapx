@@ -21,14 +21,17 @@
 			mapTypeId: google.maps.MapTypeId.TERRAIN
 		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-		google.maps.event.addListener(map, 'click', function(event) {
-			console.log("[event][click]" + JSON.stringify(event));
+		google.maps.event.addListener(map, 'click', function(e) {
+			console.log("[event][click]" + JSON.stringify(e));
 		});
-		google.maps.event.addListener(map, 'dblclick', function(event) {
-			console.log("[event][dblclick]" + JSON.stringify(event));
+		google.maps.event.addListener(map, 'dblclick', function(e) {
+			console.log("[event][dblclick]" + JSON.stringify(e));
 		});
-		google.maps.event.addListener(map, 'mouseup', function(event) {
-			console.log("[event][mouseup]" + JSON.stringify(event));
+		google.maps.event.addListener(map, 'center_changed', function(e) {
+			console.log("[event][center_changed]" + JSON.stringify(e));
+		});
+		google.maps.event.addListener(map, 'dragend', function(e) {
+			console.log("[event][dragend]" + JSON.stringify(e));
 		});
 	}
     </script>
