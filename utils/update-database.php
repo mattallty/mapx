@@ -7,7 +7,7 @@ $sql_tpl = "UPDATE _supa_geo_countries SET cou_continent = '%s', cou_capital = '
 
 foreach ($xml as $key => $val) {
 	
-	$sql = sprintf(	$sql, 
+	$sql = sprintf(	$sql_tpl, 
 		(string)$val->continent,
 		(string)$val->capital,
 		intval($val->areaInSqKm),
