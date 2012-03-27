@@ -17,7 +17,7 @@ foreach ($xml as $key => $val) {
 	
 	echo "Executing $sql ... ";
 	
-	if(/*mysqli_query($con, $sql)*/ 1 == 1) {
+	if(mysqli_query($con, $sql)) {
 		echo "OK\n";
 	}else{
 		echo "ERR\n";
